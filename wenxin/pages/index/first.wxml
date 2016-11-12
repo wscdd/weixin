@@ -1,0 +1,57 @@
+
+<scroll-view scroll-y="true" scroll-top>
+<view class="header">
+   <view class="head"><input type="text" style="padding:3px 0 0 30px;" placeholder="请输入关键字"></input><icon type="search" class="iconv" /></view>
+   <view class="hea"><a href=""><icon type="waiting" color="white"/></a><image src="{{icon}}" style="width:28px;height:28px;padding-left:20px;"></image></view>
+</view>
+<swiper class="swp" indicator-dots autoplay interval="5000" duration="1000">
+        <block wx:for="{{Carousel}}">
+            <swiper-item>
+            <image src="{{item}}" class="img"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="navs">
+      <block wx:for-items="{{ad}}">
+        <view class="nav-item" catchtap="" >
+          <navigator url="../reset/reset?title=reset" hover-class="other-navigator-hover"><image src="{{item}}" class="nav-image"/></navigator>
+        </view>
+      </block>
+    </view>
+    <view class="home-newgood">
+            <image class="home-imgtit" src="{{biao}}" alt="" />
+           <view class="plist-puzzle">
+                <a  href=""><image src="{{ty}}" class="imag" /></a>
+                <view class="s">
+                <block wx:for-items="{{type1}}">
+                    <a class="box" href=""><image src="{{item}}" class="b" style="width:129px;height:120px;"/></a>
+                    </block>
+                </view>
+            </view>
+            <image class="home-imgtit1" src="{{biao2}}" alt="" />
+            <view class="list-type2">
+            <block wx:for-items="{{type2}}">
+            <view class="view1">
+                <image class="figure1" src="{{item.icon}}"style="width:100%;height:80px;" /><span  class="tit1">{{item.name}}
+                </span>
+                </view>
+                </block>
+            </view>
+      </view>
+     <image class="home-imgtit" src="{{biao3}}" alt="" />
+       <view class="home-fashion ui-box ui-border-t">
+            <a href=""><image class="db margin-b-s" src="{{biao4}}"  style="width:100%" /></a>
+            <view class="fastion-plist">
+            <view class="navs3">
+            <block wx:for-items="{{type3}}" wx:key="name">
+                <view class="view2"><image src="{{item.icon}}"  alt="" class="figure" /><text class="tit">{{item.name}}</text></view>
+            </block>
+            </view>
+            </view>
+            <view class="navs4">
+            <block wx:for-items="{{type4}}" wx:key="name">
+                        <view class="view2"><image src="{{item.icon}}"  alt="" class="figure" /><text class="tit">{{item.name}}</text></view>
+            </block>
+            </view>
+    </view>
+</scroll-view>

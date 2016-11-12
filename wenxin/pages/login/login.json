@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText":"登陆",
+    "navigationBarTextStyle": "#ff0000",
+    "backgroundTextStyle":"light",
+    "enablePullDownRefresh": true
+}

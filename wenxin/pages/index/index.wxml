@@ -1,0 +1,137 @@
+<!--index.wxml-->
+<!--<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view>
+  </view>
+</view>-->
+<body>
+		
+<view style="height: 49px;"></view>
+<!--图片轮换-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style="width:400px;height:200px"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--导航-->
+ <!--<view class="sq-nav">
+      <block  wx:for="{{array}}" wx:key="name">
+        <view class="am-gallery-item">
+              <image style="width: 40px; height: 40px;" src="{{item.icon}}" />
+              <text>{{item.dname}}</text>
+        </view>
+      </block>
+  </view>-->
+  <view class="navs">
+      <block wx:for-items="{{array}}" wx:key="name">
+        <view class="nav-item" catchtap="catchTapCategory" data-type="{{item.dname}}">
+          <image src="{{item.icon}}" class="nav-image"/>
+          <text>{{item.dname}}</text>
+        </view>
+      </block>
+    </view>
+  <view class="h-line"></view>
+   <!--不规则展示-->
+  <view class="index-product">
+  	<view class="index-pro-lf"><image src="../images/s1.png"/></view>
+  	<view class="index-pro-lr"><image src="../images/s2.png"/></view>
+  </view>
+  <view class="product-bot">
+  	<view class="product-bot-lf"><image src="../images/s3.png"/></view>
+  	<view class="product-bot-lr">
+  		<view class="top"><image src="../images/s4.png"/></view>
+  		<view class="bot">
+  			<view class="bot-lf"><image src="../images/s5.png"/></view>
+  			<view class="bot-lr"><image src="../images/s6.png"/></view>
+  		</view>
+  	</view>
+  </view>
+  <!--不规则展示-->
+  <view class="h-line"></view>
+  <!-- 特色专区-->
+  <view class="sq-title">
+ 	<image src="../images/ts.png" style="width: 40px; height: 40px;"/>
+ 	特色专区
+  </view>
+  <view data-am-widget="gallery" class="am-gallery pro-list am-avg-sm-2 am-avg-md-2 am-avg-lg-4 am-gallery-default"  >
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test.png"/>
+                <text class="am-gallery-title">猪骨头棒新鲜生鲜肉制品猪大骨头筒骨熬汤佳品500g</text>
+                <view class="am-gallery-desc">￥52</view>
+            </a>
+        </view>
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test1.png"/>
+                <text class="am-gallery-title">冻品批发大江鸡腿 冷鲜鸡腿放心食材1kg 冷冻食材</text>
+                <view class="am-gallery-desc">￥39</view>
+            </a>
+        </view>
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test2.png" />
+                <text class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</text>
+                <view class="am-gallery-desc">￥45.8</view>
+            </a>
+        </view>
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test21.png"/>
+                <text class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</text>
+                <view class="am-gallery-desc">￥45.8</view>
+            </a>
+        </view>
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test.png" />
+                <text class="am-gallery-title">猪骨头棒新鲜生鲜肉制品猪大骨头筒骨熬汤佳品500g</text>
+                <view class="am-gallery-desc">￥52</view>
+            </a>
+        </view>
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test1.png" />
+                <text class="am-gallery-title">冻品批发大江鸡腿 冷鲜鸡腿放心食材1kg 冷冻食材</text>
+                <view class="am-gallery-desc">￥39</view>
+            </a>
+        </view>
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test2.png" />
+                <text class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</text>
+                <view class="am-gallery-desc">￥45.8</view>
+            </a>
+        </view>
+        <view class="am-gallery-item">
+            <a href="detail.html" class="">
+              <image src=" ../images/test21.png" />
+                <text class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</text>
+                <view class="am-gallery-desc">￥45.8</view>
+            </a>
+        </view>
+  </view>
+<!--签到-->
+<view class="qd-box">
+	<view class="popup-title">
+			<span>签到成功</span>
+			<view class="popup-close"><i class="iconfont">&#xe602</i></view>
+	</view>
+	<view class="dq-text">
+		<image src="../images/qiandao.png" width="40" />&nbsp; 您已连续签到3天
+	</view>
+</view>
+<!--签到-->
+
+ <!--底部-->
+ <view style="height: 55px;"></view>

@@ -1,0 +1,21 @@
+<!--shopcar.wxml-->
+<scroll-view>
+    <view class="body" wx:for="{{array}}" wx:for-item="item">
+        <view class="a">
+            <checkbox></checkbox>
+            <image class="img" mode="{{item.model}}" src="{{item.src}}"></image>
+        </view>
+        <view class="i">
+            <view class="content">{{item.content}}</view>
+            <view class="color">{{item.color}}</view>
+            <view class="cm">{{item.cm}}</view>
+            <view class="count">
+                <text class="small">{{item.small}}</text>
+                <input class="input">{{item.num}}</input>
+                <text class="big">{{item.big}}</text>
+            </view>
+            <text class="money">{{item.money}}</text>
+            <image class="images" src="{{item.src1}}"></image>
+        </view>
+    </view>
+</scroll-view>

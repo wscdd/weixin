@@ -1,0 +1,118 @@
+
+<scroll-view>
+	<view class="p-top  clearfloat">
+		<a href="personal.html">
+			<view class="tu">
+				<image src="../../img/touxiang.png" class="tou" />
+			</view>
+			<p class="name">Guoguo</p>
+		</a>
+		<view class="p-bottom p-bottom1 clearfloat">
+			<ul class="clearfloat">
+			<view class="tiao">
+				<a href="fx-center1.html">
+					<li class="box-s">
+						<span class="opa6"></span>
+						<p class="bt">我的佣金</p><p class="bt">我的积分</p><p class="bt">我的足迹</p>
+						<view><p class="price">0.00</p><p class="price">0</p><p class="price">0.00</p></view>
+					</li>
+				</a>
+				</view>
+			</ul>
+		</view>
+</view>
+	
+	<view class="contaniner fixed-contb">
+		<section class="self-header">
+			<view class="ok">
+				<view class="lbj">
+					<a href="order.html">
+						<image src="../../image/self-icon.png" class="image2"/>
+						<text class="all">全部订单</text>
+						<span><image src="../../image/right.png" style="width:10% height:10%;margin-left:200px;" class="d_img"/></span>
+					</a>
+				</view>
+				<view class="kb">
+						<view class="kd">
+						<block wx:for="{{array}}">
+							<view class="kg">
+								<a href="ordertwo.html">
+									<image src="{{item.icon}}"/>
+									<span>{{item.name}}</span>
+								</a>
+							</view>
+						</block>
+							<!--<view>
+								<a href="orderthree.html">
+									<image src="../../images/order-icon03.png" style="float:left;margin-top:20px;margin-left:10px;width:20px;height:30px;"/>
+									<p>待付款</p>
+								</a>
+							</view>
+							<view>
+								<a href="orderfour.html">
+									<image src="../../images/order-icon02.png" style="float:left;margin-top:20px;margin-left:10px;width:20px;height:30px;"/>
+									<p>待收货</p>
+								</a>
+							</view>
+							<view>
+								<a href="go-assess.html">
+									<image src="../../images/order-icon04.png" style="float:left;margin-top:20px;margin-left:10px;width:20px;height:30px;"/>
+									<p>待评价</p>
+								</a>
+							</view>-->
+						</view>
+				</view>
+			</view>
+			
+			<view class="jd">
+
+				<!--<view class="lbj">
+					<a href="order.html">
+						<image src="../../images/self-icon.png" class="image2"/>
+						<text class="all">全部订单</text>
+						<span><image src="../../images/right.png" style="width:10% height:10%;margin-left:200px;" class="d_img"/></span>
+					</a>
+				</view>
+-->
+
+                <block wx:for="{{array1}}">
+				<view class="kr">
+					<a href="datum.html">
+						<image src="{{item.icon}}" class="image3"/>
+						<text class="all1">{{item.name}}</text>
+						<span><image src="{{item.url}}" style="width:10% height:10%;margin-left:200px;" class="d_img"/></span>
+					</a>
+					</view>
+				</block>
+			</view>
+			<!--<view class="self-icon">
+				<li>
+					<a href="gobuy.html">
+						<image src="images/self-icon05.png"/>
+						<p>我的分销</p>
+						<span><image src="images/right.png"/></span>
+					</a>
+				</li>
+				<li>
+					<a href="sign.html">
+						<image src="images/self-icon011.png"/>
+						<p>修改密码</p>
+						<span><image src="images/right.png"/></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<image src="images/self-icon013.png"/>
+						<p>账号绑定</p>
+						<span><image src="images/right.png"/></span>
+					</a>
+				</li>
+			</view>-->
+			<!--<a href="login.html"><input type="button" value="退出" /></a>-->
+		 <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="warn"> 退出 </button>
+		</section>
+		
+		
+	</view>		
+</scroll-view>
