@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><!--><div id="menu" class="mod-navbar" alog-group="home-menu">.*<li>.<a>(.*<!-->
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+</head>
+<body>
+<style>
+span
+{
+	color:red;padding-left:5px;
+}
+</style>
+	<form method="post" action="http://www.wsc.com/python/zhengze.py" onsubmit="return call()">
+		<h1>注册</h1>
+		<table border>
+		<tr>
+			<td>姓名：</td>
+			<td><input type="text" name="name" id="name" onblur="cname()"><span id="xm">*</span></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" name="pwd" id="pwd" onblur="cpwd()"><span id="mm">*</span></td>
+		</tr>
+		<tr>
+			<td>确认密码：</td>
+			<td><input type="password" name="pwd1" id="pwd1" onblur="cpwd1()"><span id="que">*</span></td>
+		</tr>
+		<tr>
+			<td>邮箱：</td>
+			<td><input type="text" name="email" id="email" onblur="cemail()"><span id="yx">*</span></td>
+		</tr>
+		<tr>
+			<td>手机号：</td>
+			<td><input type="text" name="phone" id="phone" onblur="cphone()"><span id="sjh">*</span></td>
+		</tr>
+		<tr>
+			<td>身份证号：</td>
+			<td><input type="text" name="idcard" id="idcard" onblur="cid()"><span id="sf">*</span></td>
+		</tr>
+		<tr>
+			<td colspan=2 style="text-align:center"><input type="submit" value="登陆">
+			<input type="reset" value="重置"></td>
+		</tr>
+		</table>
+
+	</form>
+	<script>
+	function $(id)
+	{
+		return document.getElementById(id);
+	}
+	//验证姓名
+	function cname()
+	{
+		var username=$("name").value;
+		var reg=/^[a-z_]([a-z]|[0-9])|[\u4e00-\u9fa5]{2,6}$/;
+		if(username=="")
+		{
+			$("xm").innerHTML="用户名不能为空";
+			return false;
+		}
+		if(username!='')
+		{
+			if(reg.test(username))
+			{
+				$("xm").innerHTML="√";
+				return true;
+			}
+			else
+			{
+				$("xm").innerHTML="必须由5-10为数字或字母组成，不允许数字开头";
+				return false;
+			}
+		}else
+		{
+			$("xm").innerHTML="√";
+			$("xm").style.color="green";
+	    	return true;
+		}
+	}
+	//验证密码
+	function cpwd()
+	{
+		var pwd=$("pwd").value;
+		var reg=/^([a-z]|[0-9]){6,}$/i;
+		if(pwd!='')
+		{
+			if(reg.test(pwd))
+			{
+				$('mm').innerHTML='√';
+				return true;
+			}else
+			{
+				$('mm').innerHTML='密码必须在六位以上';
+				return false;
+			}
+		}else
+		{
+			$('mm').innerHTML='密码不能为空';
+			return false;
+		}
+	}
+	//验证确认密码
+	function cpwd1()
+	{
+		var pwd1=$('pwd1').value;
+		if(pwd1!=''){
+			if($('pwd').value!=pwd1)
+			{
+				$('que').innerHTML='密码与确认密码不一致';
+				return false;
+			}else
+			{
+				$('que').innerHTML='√';
+				return true;
+			}
+		}else{
+			$('que').innerHTML='密码不能为空';
+			return false;
+		}
+	}
+	//验证性别
+	function csex()
+	{
+		var sex=document.getElementsByName('sex');
+		var str='';
+		for(i in sex)
+		{
+			if(sex[i].checked==true)
+			{
+				str=sex[i].value;
+			}
+		}
+		if(str=='')
+		{
+			$('xb').innerHTML='必须选一项';
+			return false;
+		}else
+		{
+			$('xb').innerHTML='√';
+			return true;
+		}
+	}
+
+	//验证邮箱
+	function cemail()
+	{
+		var email=$('email').value;
+		var reg=/^\w+@\w+(\.)com|net|cn$/;
+		if(email!='')
+		{
+			if(reg.test(email))	
+			{
+				$('yx').innerHTML='√';
+				return true;
+			}else
+			{
+				$('yx').innerHTML='格式不正确';
+				return false;
+			}
+		}else
+		{
+			$('yx').innerHTML='不能为空';
+			return false;
+		}
+	}
+	//验证手机号
+	function cphone()
+	{
+		var phone=$('phone').value;
+		var reg=/^1[3,5,8]\d{9}$/;
+		if(phone!='')
+		{
+			if(reg.test(phone))
+			{
+				$('sjh').innerHTML='√';
+				return true;
+			}else
+			{
+				$('sjh').innerHTML='不合格';
+				return false;
+			}
+		}else
+		{
+			$('sjh').innerHTML='不为空';
+			return false;
+		}
+	}
+	
+	//验证身份证号码
+	function cid()
+	{
+		var idcard=$('idcard').value;
+		var reg=/^((\d{15})|(\d{18})|(\d{17}x))$/;
+		if(idcard!='')
+		{
+			if(reg.test(idcard))
+			{
+				$('sf').innerHTML='√';
+				return true;
+			}else
+			{
+				$('sf').innerHTML='身份证号不合法';
+				return false;
+			}
+		}else
+		{
+			$('sf').innerHTML='身份证号不为空';
+			return false;
+		}
+	}
+	
+	
+	//验证提交
+	function call()
+	{
+		if(cname()&cpwd()&cpwd1()&&cemail()&cphone()&cid())
+		{
+			return true;
+		}else
+		{
+			//var shopping = document.getElementById("submit");
+			// shopping.setAttribute("action"," ");
+			return false;
+		}
+	}
+	</script>
+</body>
+</html>
