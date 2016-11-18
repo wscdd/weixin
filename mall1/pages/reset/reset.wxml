@@ -1,0 +1,15 @@
+<!--sign.wxml-->
+<view>
+    <view class="input">
+        <image src="{{src}}"></image><input placeholder="{{password}}"></input>
+    </view>
+    <view class="input">
+        <image src="{{src1}}"></image><input placeholder="{{password1}}"></input>
+    </view>
+    <view class="input">
+        <image src="{{src2}}"></image><input placeholder="{{password2}}"></input>
+    </view>
+    <view>
+        <button>{{btn}}</button>
+    </view>
+</view>

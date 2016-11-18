@@ -1,0 +1,12 @@
+<!--login.wxml-->
+<view id="body">
+        <view class="input">
+            <image modo="{{modo}}" src="{{src}}"></image>
+            <input placeholder="{{input}}"></input>
+        </view>
+        <view class="input">
+            <image modo="{{modo}}" src="{{src1}}"></image>
+            <input type="password" placeholder="{{password}}" />
+        </view>
+    <button>{{Content}}</button>
+</view>

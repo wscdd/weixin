@@ -1,0 +1,136 @@
+body{background-color: #f2f2f2;}
+/*白色顶部*/
+/*.top-header{z-index: 1;  width: 100%;  background-color: #fff; display: table; border-bottom: solid 1px rgba(0,0,0,0.2);}
+.top-header h3{ font-size: 1.9em;  color: #333; margin: 0 30%; display: table-cell;  font-weight: normal; text-align: center;  padding: 0.7em 0;}
+.top-header .text{display: table-cell; text-align: center; width: 20%; font-size: 1.5em; color: #db3752; }
+.top-header .texta{ color: #999;}
+.top-header a{display: table-cell;}
+.top-header .icona{ width: 8.5%; padding-left: 5%; vertical-align: middle;}//只能添加图标
+.top-header .iconb{ width: 11%;padding-right: 5%; vertical-align: middle;}//只能添加图标
+.top-header .text-top{ width: 11%;color: #999;font-size: 1.169em; vertical-align: middle;}//能添加文字
+.top-header image{ width: 100%;}*/
+
+/*个人中心*/
+
+
+/*.box-{width:20%;}*/
+.tu{
+    size: 30%;
+}
+.p-top {
+    width: 100%;
+    height:140px; 
+    padding: 5% 0 0;
+    background: url(../../uploads/7.jpg) center no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+.tou{
+    width: 20%;
+    height:70px;
+}
+
+.tiao{
+
+  background: #000000;
+  opacity:0.7;
+filter:alpha(opacity=70);
+}
+.bt{
+  color: #FDFFFF;
+  font-size:80%;
+  padding: 10px;
+}
+.price{
+  color: #FDFFFF;
+  font-size:80%;
+   padding:0px 30px;
+}
+.contaniner .self dl dt {
+    width: 20%;
+    overflow: hidden;
+    padding: 4% 5%;
+    background-color: #fff;
+}
+dl {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}  
+/*.all {
+    color: #333;
+    font-weight: normal;
+    font-size: 1em;
+    margin: 25px 5%;
+    vertical-align: middle;
+    float:left;
+}*/
+.all{
+  line-height: 45px;
+  margin-left: 18px;  
+}
+ .self-icon{ width: 1%; height:2%;background-color: #fff}
+ .self-icon li{ width:90%;padding:4% 5%; overflow: hidden; border-bottom: solid 1px #c8c8c8;}
+ .self-icon li a{ width: 50%; display: block; overflow: hidden;}
+ .self-icon li img{ width: 10%; float: left;}
+ .self-icon li p{font-size:1.55em ; color: #333; padding: 1.2% 5%;  float: left;}
+ .self-icon li span{ width: 4%; float: right;}
+ .self-icon li span img{ width: 50%;}
+.elf-icon{
+    width: 20%;
+    overflow: hidden;
+    padding: 4% 5%;
+    background-color: #fff;
+}
+.kg{
+  width:60px;
+  float:left; 
+  padding:10px 15px;
+}
+.kg image{
+  width:50px;
+  height:50px;
+}
+.ok{
+  width:100%;
+}
+.kb{
+  width:100%;
+  border-top:1px solid black;
+}
+.lbj{
+  width:100%;
+  height:55px;
+}
+.lbj image{
+  height: 30px;
+  width: 20px;
+  margin-top:10px;
+  margin-left:5px; 
+} 
+.image2{
+    margin-bottom: -6px;
+}  
+.image3{
+    margin-bottom: -6px;
+} 
+.kr{
+  width:100%;
+  height:20%;
+}
+.jd{
+  width:100%;   
+}
+.kr image{
+  height: 30px;
+  width: 20px;
+  margin-top:10px;
+  margin-left:5px; 
+}
+.all1{
+  line-height: 45px;
+  margin-left: 18px;  
+} 

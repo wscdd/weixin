@@ -1,0 +1,52 @@
+<scroll-view scroll-y="true" style="height: 800px;" bindscrolltoupper="upper" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<view class="header">
+   <view class="head"><input type="text" style="padding:3px 0 0 30px;" placeholder="请输入关键字"></input><icon type="search" class="iconv" /></view>
+   <view class="head2"><a href=""></a><image src="{{icon}}" style="width:28px;height:28px;padding-left:20px;"></image></view>
+</view>
+	<view class="contaniner fixed-cont">
+	<!--分类列表start-->
+		<view class="assort">
+        <view wx:for="{{sort}}">
+            <view class="sort-li">
+				<image src="{{item.image}}" class="sort-image" aspectFit="aspectFit" aspectFill="aspectFill"/>
+				<text class="font">{{item.span}}</text>>
+			</view>
+        </view>
+		</view>
+	<!--分类列表end-->
+	<!--banner-->
+<section class="assort-cont">
+	<figure>
+		<a href="#">
+			<image src="{{banner}}" class="assort-cont-image"/>
+		</a>
+	</figure>
+<!--专区-->
+	<view style="width:400px; padding-top:2px;">
+		<view class="first-block">
+		<text class="text">{{dt}}</text>	
+		<view class="assort-block">
+		<block wx:for-items="{{src}}">
+			<view class="nav-item">
+			<image src="{{item.image}}" class="assort-image"/>
+			<text class="tit">{{item.span}}</text>
+			</view>
+		</block>
+		</view>
+	</view>
+
+	<view class="second-block" style="">
+			<text class="text">{{second}}</text>
+			<view class="assort-block">
+		<block wx:for-items="{{second2}}">
+			<view class="nav-item">
+			<image src="{{item.image}}" class="assort-image"/>
+			<text class="tit">{{item.span}}</text>
+			</view>
+		</block>
+		</view>
+		</view>
+	</view>	
+</section>
+</view>
+</scroll-view>

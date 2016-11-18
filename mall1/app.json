@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sort/sort",
+    
+    "pages/login/login",
+    "pages/reset/reset",
+    "pages/shopcar/shopcar"
+  ], "window": {
+    "navigationBarTitleText": "蹦沙拉卡拉"
+  },
+  "tabBar": {
+  "list": [{
+      "pagePath": "pages/index/index",
+      "text": "商城首页",
+      "iconPath": "pages/images/footer001.png",
+      "selectedIconPath":"pages/images/footer01.png"
+    }, {
+      "pagePath": "pages/sort/sort",
+      "text": "产品分类",
+      "iconPath": "pages/images/footer002.png",
+      "selectedIconPath":"pages/images/footer02.png"
+    },{
+      "pagePath": "pages/shopcar/shopcar",
+      "text": "购物车",
+      "iconPath": "pages/images/footer003.png",
+      "selectedIconPath":"pages/images/footer03.png"
+    }, {
+      "pagePath": "pages/info/info",
+      "text": "会员中心",
+      "iconPath": "pages/images/footer004.png",
+      "selectedIconPath":"pages/images/footer04.png"
+    }],
+    "selectedColor":"red"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+  
+}
